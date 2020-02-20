@@ -113,25 +113,6 @@ h1 {
     font-size: 70px;
 }
 
-.h1Shadow {
-    position: absolute;
-    animation-name: titleSlide;
-    animation-fill-mode: forwards;
-    animation-duration: 0.7s;
-    animation-delay: 0.3s;
-    color: lightgray;
-    z-index: -1;
-}
-
-@keyframes titleSlide {
-    from {
-        transform: rotate3d(0, 0, 0, 0deg);
-    }
-    to {
-        transform: rotate3d(1, 0, 0, 75deg)skewX(-20deg)translateY(80px)translateX(40px);
-    }
-}
-
 .subHead {
     text-align: center;
     font-size: 17px;
