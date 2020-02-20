@@ -9,13 +9,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #36393F;
+    background: black;
 }
 
 nav {
     position: sticky;
     width: 100%;
-    background: #36393F;
+    background: black;
     margin-top: -10px;
 }
 
@@ -34,7 +34,7 @@ li {
 li a {
     color: white;
     text-decoration: none;
-    font-family: 'Exo', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     padding: 8px;
 }
 
@@ -45,12 +45,12 @@ li a::selection {
 
 .contact {
     background: white;
-    color: #36393F;
-    border: solid 1px #36393F;
+    color: black;
+    border: solid 1px white;
 }
 
 .contact:hover {
-    background: #36393F;
+    background: black;
     color: white;
     border: solid 1px white;
 }
@@ -58,8 +58,8 @@ li a::selection {
 .hero {
     display: flex;
     width: 100%;
-    justify-content: space-around;
-    background: #36393F;
+    justify-content: center;
+    background: black;
     color: white;
     top: 0px;
     margin: 0px;
@@ -70,12 +70,13 @@ li a::selection {
     display: flex;
     opacity: 0;
     flex-direction: column;
-    align-items: flex-start;
-    max-width: 600px;
+    align-items: center;
+    max-width: 900px;
     animation-name: fadeIn;
     animation-fill-mode: forwards;
     animation-duration: 1s;
     animation-delay: 0.3s;
+    text-align: center;
 }
 
 .callToASect {
@@ -88,18 +89,17 @@ li a::selection {
 
 .hero div button {
     border: solid white 3px;
-    background: #36393F;
+    background: black;
     color: white;
     padding: 10px;
-    font-family: 'Exo', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
-    margin-top: 20px;
-    margin-right: 20px;
+    margin: 10px 30px;
 }
 
 .hero div button:hover {
     background: white;
-    color: #36393F;
+    color: black;
     cursor: pointer;
 }
 
@@ -109,134 +109,35 @@ li a::selection {
 }
 
 h1 {
-    font-family: 'Righteous', cursive;
+    font-family: 'Montserrat', sans-serif;
     font-size: 70px;
-    text-shadow: gray 2px 2px 0px;
+}
+
+.h1Shadow {
+    position: absolute;
+    animation-name: titleSlide;
+    animation-fill-mode: forwards;
+    animation-duration: 0.7s;
+    animation-delay: 0.3s;
+    color: lightgray;
+    z-index: -1;
+}
+
+@keyframes titleSlide {
+    from {
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+    to {
+        transform: rotate3d(1, 0, 0, 75deg)skewX(-20deg)translateY(80px)translateX(40px);
+    }
 }
 
 .subHead {
+    text-align: center;
     font-size: 17px;
-    max-width: 400px;
-    margin-top: -30px;
+    max-width: 700px;
+    margin-top: -40px;
     font-family: 'Roboto', sans-serif;
-}
-
-.heroGraphic img {
-    position: absolute;
-    width: 0;
-    height: 0;
-    z-index: 20;
-    right: 100px;
-    animation-name: animatedSVG;
-    animation-fill-mode: forwards;
-    animation-duration: 1s;
-    animation-delay: 0.3s;
-}
-
-@keyframes animatedSVG {
-    from {
-        opacity: 0;
-        height: 450px;
-        width: 450px;
-    }
-    to {
-        opacity: 1;
-        width: 500px;
-        height: 500px;
-    }
-}
-
-.animatedSquare1 {
-    position: relative;
-    top: 300px;
-    right: -200px;
-    background: #2C55FF;
-    box-shadow: black 0px 0px 10px;
-    perspective: 500px;
-    z-index: 0;
-    animation-name: animatedSquare1;
-    animation-fill-mode: forwards;
-    animation-duration: 1s;
-    animation-delay: 0.2s;
-}
-
-.animatedSquare2 {
-    position: relative;
-    top: 0px;
-    right: 200px;
-    background: #D63E36;
-    box-shadow: black 0px 0px 10px;
-    perspective: 500px;
-    z-index: 0;
-    animation-name: animatedSquare2;
-    animation-fill-mode: forwards;
-    animation-duration: 0.3s;
-}
-
-.animatedSquare3 {
-    position: relative;
-    top: -400px;
-    right: -300px;
-    background: #FFF083;
-    box-shadow: black 0px 0px 10px;
-    perspective: 500px;
-    z-index: 0;
-    animation-name: animatedSquare3;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes animatedSquare3 {
-    0% {
-        width: 0px;
-        height: 0px;
-        transform: rotateX(0deg);
-        transform: rotateY(0deg);
-    }
-    100% {
-        height: 300px;
-        width: 200px;
-        transform: rotateX(5deg);
-        transform: rotateZ(10deg);
-    }
-}
-
-@keyframes animatedSquare2 {
-    0% {
-        width: 0px;
-        height: 0px;
-        transform: rotateX(0deg);
-        transform: rotateY(0deg);
-    }
-    25% {}
-    50% {
-        height: 10px;
-    }
-    100% {
-        height: 300px;
-        width: 500px;
-        transform: rotateX(5deg);
-        transform: rotateZ(10deg);
-    }
-}
-
-@keyframes animatedSquare1 {
-    0% {
-        width: 0px;
-        height: 0px;
-        transform: rotateX(0deg);
-        transform: rotateY(0deg);
-    }
-    25% {
-        height: 100px;
-        width: 300px;
-    }
-    100% {
-        height: 100px;
-        width: 300px;
-        transform: rotateX(50deg);
-        transform: rotateZ(45deg);
-    }
 }
 
 @keyframes fadeIn {
@@ -263,7 +164,7 @@ h1 {
 
 @keyframes backgroundFade {
     from {
-        background: #36393F;
+        background: black;
     }
     to {
         background: white;
@@ -357,16 +258,15 @@ h1 {
     display: flex;
     justify-content: center;
     text-align: center;
+    color: black;
+    border: thick black solid;
+    background: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .cube__face::selection {
     color: none;
     background: none;
-}
-
-.cube__face {
-    background: white;
-    font-family: 'Exo', sans-serif;
 }
 
 .cube__face--O {
@@ -394,33 +294,34 @@ h1 {
 }
 
 h2 {
-    font-family: 'Exo', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
 }
 
 .services {
-    flex-wrap: wrap;
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    animation-name: backgroundFade;
+    justify-content: center;
+    animation-name: fade;
     animation-fill-mode: forwards;
     animation-duration: 0.7s;
     animation-delay: 0.3s;
+    margin: 0px;
 }
 
 .card {
     font-family: 'Roboto', sans-serif;
-    max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: #36393F;
+    background: black;
     color: white;
-    border-radius: 10px;
-    margin-bottom: 10px;
+}
+
+.card p {
+    max-width: 700px;
 }
 
 .contactUs {
@@ -429,10 +330,9 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: black;
     padding-bottom: 50px;
-    opacity: 0;
-    animation-name: fadeIn;
+    animation-name: backgroundFade;
     animation-fill-mode: forwards;
     animation-duration: 0.9s;
     animation-delay: 1.2s;
@@ -463,84 +363,21 @@ h2 {
     flex-direction: column;
 }
 
-@media only screen and (max-width:1367px) {
-    @keyframes animatedSVG {
-        from {
-            opacity: 0;
-            height: 250px;
-            width: 250px;
-        }
-        to {
-            opacity: 1;
-            width: 300px;
-            height: 300px;
-        }
-    }
-    .animatedSquare1 {
-        top: 200px;
-        right: 0px;
-    }
-    .animatedSquare2 {
-        top: 90px;
-        right: 200px;
-    }
-    .animatedSquare3 {
-        top: -90px;
-        right: -100px;
-    }
-    @keyframes animatedSquare3 {
-        0% {
-            width: 0px;
-            height: 0px;
-            transform: rotateX(0deg);
-            transform: rotateY(0deg);
-        }
-        100% {
-            height: 100px;
-            width: 50px;
-            transform: rotateX(5deg);
-            transform: rotateZ(10deg);
-        }
-    }
-    @keyframes animatedSquare2 {
-        0% {
-            width: 0px;
-            height: 0px;
-            transform: rotateX(0deg);
-            transform: rotateY(0deg);
-        }
-        25% {}
-        50% {
-            height: 10px;
-        }
-        100% {
-            height: 100px;
-            width: 200px;
-            transform: rotateX(5deg);
-            transform: rotateZ(10deg);
-        }
-    }
-    @keyframes animatedSquare1 {
-        0% {
-            width: 0px;
-            height: 0px;
-            transform: rotateX(0deg);
-            transform: rotateY(0deg);
-        }
-        25% {
-            height: 50px;
-            width: 100px;
-        }
-        100% {
-            height: 50px;
-            width: 100px;
-            transform: rotateX(50deg);
-            transform: rotateZ(45deg);
-        }
-    }
-}
-
 @media only screen and (max-width:1133px) {
+    .services {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .middle {
+        background: white;
+        color: black;
+    }
+    .card {
+        width: 100%;
+    }
+    .card p {
+        max-width: 350px;
+    }
     .about h2,
     .about p {
         text-align: center;
@@ -550,100 +387,8 @@ h2 {
     }
 }
 
-@media only screen and (max-width:900px) {
-    .heroInfo {
-        padding-left: 20px;
-    }
-    @keyframes animatedSVG {
-        from {
-            opacity: 0;
-            height: 50px;
-            width: 50px;
-        }
-        to {
-            opacity: 1;
-            width: 100px;
-            height: 100px;
-        }
-    }
-    .heroGraphic img {
-        top: 100px;
-    }
-    .animatedSquare1 {
-        top: 10px;
-        right: 50px;
-    }
-    .animatedSquare2 {
-        top: 10px;
-        right: 100px;
-    }
-    .animatedSquare3 {
-        top: -50px;
-        right: 20px;
-    }
-    @keyframes animatedSquare3 {
-        0% {
-            width: 0px;
-            height: 0px;
-            transform: rotateX(0deg);
-            transform: rotateY(0deg);
-        }
-        100% {
-            height: 100px;
-            width: 50px;
-            transform: rotateX(5deg);
-            transform: rotateZ(10deg);
-        }
-    }
-    @keyframes animatedSquare2 {
-        0% {
-            width: 0px;
-            height: 0px;
-            transform: rotateX(0deg);
-            transform: rotateY(0deg);
-        }
-        25% {}
-        50% {
-            height: 10px;
-        }
-        100% {
-            height: 50px;
-            width: 100px;
-            transform: rotateX(5deg);
-            transform: rotateZ(10deg);
-        }
-    }
-    @keyframes animatedSquare1 {
-        0% {
-            width: 0px;
-            height: 0px;
-            transform: rotateX(0deg);
-            transform: rotateY(0deg);
-        }
-        25% {
-            height: 10px;
-            width: 0px;
-        }
-        100% {
-            height: 25px;
-            width: 100px;
-            transform: rotateX(50deg);
-            transform: rotateZ(45deg);
-        }
-    }
-}
-
-@media only screen and (max-width:500px) {
-    .heroGraphic img {
-        display: none;
-    }
-    .animatedSquare1 {
-        display: none;
-    }
-    .animatedSquare2 {
-        display: none;
-    }
-    .animatedSquare3 {
+@media only screen and (max-width:831px) {
+    .h1Shadow {
         display: none;
     }
 }
@@ -654,7 +399,13 @@ h2 {
         word-wrap: break-word;
     }
     h2 {
-        font-size: 20px;
+        font-size: 30px;
+    }
+    .subHead {
+        margin-top: 0px;
+    }
+    .cubeHolder {
+        margin-bottom: 30px;
     }
 }
 
