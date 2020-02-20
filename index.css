@@ -34,7 +34,7 @@ li {
 li a {
     color: white;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Exo', sans-serif;
     padding: 8px;
 }
 
@@ -91,7 +91,7 @@ li a::selection {
     background: #36393F;
     color: white;
     padding: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Exo', sans-serif;
     font-size: 20px;
     margin-top: 20px;
     margin-right: 20px;
@@ -109,8 +109,9 @@ li a::selection {
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Righteous', cursive;
     font-size: 70px;
+    text-shadow: gray 2px 2px 0px;
 }
 
 .subHead {
@@ -365,7 +366,7 @@ h1 {
 
 .cube__face {
     background: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Exo', sans-serif;
 }
 
 .cube__face--O {
@@ -393,7 +394,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Exo', sans-serif;
     font-size: 40px;
 }
 
