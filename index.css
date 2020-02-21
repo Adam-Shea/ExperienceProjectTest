@@ -121,6 +121,31 @@ h1 {
     font-family: 'Roboto', sans-serif;
 }
 
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 4s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -131,18 +156,10 @@ h1 {
     }
 }
 
-@keyframes fadeIn2 {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 .about {
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     width: 100%;
     padding-bottom: 50px;
@@ -174,11 +191,21 @@ h1 {
     animation-delay: 0.5s;
 }
 
+.inUpOut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inUpOutText {
+    max-width: 500px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
 .cubeHolder {
     display: flex;
-    justify-content: space-around;
-    width: 40%;
-    margin-top: 90px;
+    margin-top: 60px;
 }
 
 .cubeCanvas {
@@ -249,7 +276,7 @@ h1 {
     justify-content: center;
     text-align: center;
     color: black;
-    border: thick black solid;
+    border: 2px black solid;
     background: white;
     font-family: 'Montserrat', sans-serif;
 }
